@@ -1,0 +1,45 @@
+@import "../../common/assets/identity";
+
+.storybook-button {
+  font-family: 'Titillium Web', serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.storybook-button--primary {
+  padding: 8px 14px;
+  background-color: #e0a722;
+  color: $original-secondary-blue;
+  border: none;
+  border-radius: 2px;
+}
+
+.storybook-button--primary:hover {
+  cursor: pointer;
+  background-color: #e0a722e7;
+}
+
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
