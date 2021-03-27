@@ -20,19 +20,25 @@ The project structure will be as below:
 
     .
     ├── .storybook             # Storybook configuration
-    ├── src                    # Documentation files (alternatively `doc`)
+    ├── .github                # Github workflow configuration
+    ├── src                    # Source files and folders
     ├── test                   # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                  # Tools and utilities
-    ├── LICENSE
-    └── README.md
+    ├── Makefile               # Makefile for running commands (e.g. make local)
+    ├── index.js               # Main file for running the main app
+    ├── Environment.js         # Javascript environment for using from process.env and return an object for better usage. 
+    ├── .env.local             # Local env (activate by `make local`)
+    ├── .env.development       # Development env (activate by `make dev`)
+    ├── .env.production        # Production env (activation by `make production`)
+    ├── LICENSE                 
+    └── README.md   
 
 Inside a `src` folder would be some other folders as below:
 
     src
-    ├── App.js                 # Assets and Mock-API for json-server
+    ├── App.js                 # 
     ├── components             # Reusable components
     ├── stories                # Stories for getting preview
-    ├── common             # Main renderer
+    ├── common                 
            ├── assets
            ├── mock-api
            ├── utilities   
@@ -47,4 +53,4 @@ you could use below command for getting preview from the storybook.
 ```
 make storybook
 ``` 
-This storybook is based on [**Wish Work Des
+This storybook is based on [**Wish Work Design System**](https://github.com/wish-team/wish-work-dms).
