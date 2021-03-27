@@ -1,6 +1,6 @@
 # Wish Work React Application
 This app ships with the main React and Storybook configuration files you'll need to get up and running fast. There are standards for front-end development
-that has been initialized by **Wish Work** team for products which is developed by freelancers and developers. In this
+that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
 README, we provide useful information so that developers understand the project structure.
 
 ## Installation
@@ -16,7 +16,7 @@ After that the project will be initialize. there will be some questions that you
 for example which template would you prefer `Javascript` or `Typescript`.
 
 ## Structure
-The project structure will be as below: \
+The project structure will be as below: 
 
     .
     ├── .storybook             # Storybook configuration
@@ -29,10 +29,13 @@ The project structure will be as below: \
 Inside a `src` folder would be some other folders as below:
 
     src
-    ├── common                 # Assets and Mock-API for json-server
+    ├── App.js                 # Assets and Mock-API for json-server
     ├── components             # Reusable components
     ├── stories                # Stories for getting preview
-    ├── App.js                 # Main renderer
+    ├── common             # Main renderer
+           ├── assets
+           ├── mock-api
+           ├── utilities   
 
 
 ## Environment Variables
@@ -40,5 +43,8 @@ Inside a `src` folder would be some other folders as below:
 ## Local Development
 
 ## Storybook Preview
-
-## Contribute
+you could use below command for getting preview from the storybook.
+```
+make storybook
+``` 
+This storybook is based on [**Wish Work Des

@@ -7,7 +7,7 @@ local:
 story-book:
 		npm run storybook
 
-stage:
+dev:
 	./node_modules/.bin/env-cmd -f .env.development --use-shell "npm install && npm run build"
 
 production:

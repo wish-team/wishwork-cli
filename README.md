@@ -16,15 +16,21 @@ After that the project will be initialize. there will be some questions that you
 for example which template would you prefer `Javascript` or `Typescript`.
 
 ## Structure
-The project structure will be as below: \
+The project structure will be as below: 
 
     .
     ├── .storybook             # Storybook configuration
-    ├── src                    # Documentation files (alternatively `doc`)
+    ├── .github                # Github workflow configuration
+    ├── src                    # Source files and folders
     ├── test                   # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                  # Tools and utilities
-    ├── LICENSE
-    └── README.md
+    ├── Makefile               # Makefile for running commands (e.g. make local)
+    ├── index.js               # Main file for running the main app
+    ├── Environment.js         # Javascript environment for using from process.env and return an object for better usage. 
+    ├── .env.local             # 
+    ├── .env.development       # 
+    ├── .env.production        # 
+    ├── LICENSE                # 
+    └── README.md              # 
 
 Inside a `src` folder would be some other folders as below:
 
