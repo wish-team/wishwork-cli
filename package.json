@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/octocat/my-other-repo.git"
   },
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "CLI to Bootstrap Wish Work Products",
   "main": "src/index.js",
   "bin": {
