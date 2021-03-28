@@ -1,4 +1,6 @@
 # Wish Work React Application
+
+[![npm version](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app.svg)](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app) \
 This app ships with the main React and Storybook configuration files you'll need to get up and running fast. There are standards for front-end development
 that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
 README, we provide useful information so that developers understand the project structure. \
@@ -7,7 +9,7 @@ README, we provide useful information so that developers understand the project 
 
 ## Installation
 First of all open the terminal and write below command:
-```
+```sh
 mkdir my-wish-app && cd my-wish-app
 ```
 and then:
