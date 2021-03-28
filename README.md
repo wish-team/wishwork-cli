@@ -17,6 +17,7 @@ npx @wishwork/create-wish-work-app --install
 After that the project will be initialize. there will be some questions that you should answer.\
 for example which template would you prefer `Javascript` or `Typescript`.
 
+
 ## Structure
 The project structure will be as below: 
 

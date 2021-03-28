@@ -1,10 +1,13 @@
 {
   "name": "@wishwork/create-wish-work-app",
-  "version": "1.3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octocat/my-other-repo.git"
+  },
+  "version": "1.4.2",
   "description": "CLI to Bootstrap Wish Work Products",
   "main": "src/index.js",
   "bin": {
-    "@wishwork/create-wish-work-app": "bin/create-wish-work-app",
     "create-wish-work-app": "bin/create-wish-work-app"
   },
   "publishConfig": {
