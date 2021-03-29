@@ -1,7 +1,7 @@
-# Wish Work React Application
+# Create Wish Work App
 
 [![npm version](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app.svg)](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app) \
-This app ships with the main React and Storybook configuration files you'll need to get up and running fast. There are standards for front-end development
+This app ships with the main **React** and **Storybook** configuration files you'll need to get up and running fast. There are standards for front-end development
 that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
 README, we provide useful information so that developers understand the project structure. \
 \
@@ -89,3 +89,15 @@ you could use below command for getting preview from the storybook.
 make storybook
 ``` 
 This storybook is based on [**Wish Work Design System**](https://github.com/wish-team/wish-work-dms).
+
+## Auto Deploy on Github.io
+There is a workflow for better testing of the application for deployment. For this purpose we provide 
+a `main.yaml` file in `.github/workflow` folder.
+you should create two instance in your repository settings: 
+1. `ACTIONS_DEPLOY_ACCESS_TOKEN`
+2. `REACT_APP_GITHUB_URL`
+\
+Make sure GitHub Pages option in your GitHub project settings is set to use the gh-pages branch.
+\
+\
+*For more information: [Setting up a CI/CD workflow on GitHub Actions for a React App](https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp)*

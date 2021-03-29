@@ -12,3 +12,6 @@ dev:
 
 production:
 	./node_modules/.bin/env-cmd -f .env.production --use-shell "npm install --production && npm run build"
+
+github:
+	"npm run github"
