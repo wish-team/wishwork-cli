@@ -1,4 +1,6 @@
 # Wish Work React Application
+
+[![npm version](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app.svg)](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app) \
 This app ships with the main React and Storybook configuration files you'll need to get up and running fast. There are standards for front-end development
 that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
 README, we provide useful information so that developers understand the project structure. \
@@ -7,7 +9,7 @@ README, we provide useful information so that developers understand the project 
 
 ## Installation
 First of all open the terminal and write below command:
-```
+```sh
 mkdir my-wish-app && cd my-wish-app
 ```
 and then:
@@ -15,7 +17,7 @@ and then:
 npx @wishwork/create-wish-work-app --install
 ```
 After that the project will be initialize. there will be some questions that you should answer.\
-for example which template would you prefer `Javascript` or `Typescript`.
+For example which template would you prefer `Javascript` or `Typescript`.
 
 
 ## Structure
@@ -42,11 +44,18 @@ Inside a `src` folder would be some other folders as below:
     ├── components             # Reusable components
     ├── stories                # Stories for getting preview
     ├── common                 
-           ├── assets
-           ├── mock-api
-           ├── utilities   
+         ├── assets            #  assets like images, fonts, icons, identity.css, etc
+         ├── mock-api          #  consists of two json file one named mock.json (json returner) one named routes.json (route handler) 
+         ├── utilities   
 
 
+## Local Server
+
+For running `json-server` for local development, use below command:
+```sh
+make json-server
+```
+For more information about json-server library please click [**here**](https://github.com/typicode/json-server).
 ## Environment Variables
 
 As mentioned above, there will be three envrionment variables: `.env.local` , `.env.development` and `.env.production`. \

@@ -17,7 +17,7 @@ and then:
 npx @wishwork/create-wish-work-app --install
 ```
 After that the project will be initialize. there will be some questions that you should answer.\
-for example which template would you prefer `Javascript` or `Typescript`.
+For example which template would you prefer `Javascript` or `Typescript`.
 
 
 ## Structure
@@ -44,11 +44,18 @@ Inside a `src` folder would be some other folders as below:
     ├── components             # Reusable components
     ├── stories                # Stories for getting preview
     ├── common                 
-           ├── assets
-           ├── mock-api
-           ├── utilities   
+         ├── assets            #  assets like images, identity.css, etc
+         ├── mock-api          #  consists of two json file one named mock.json (json returner) one named routes.json (route handler) 
+         ├── utilities   
 
 
+## Local Server
+
+For running `json-server` for local development, use below command:
+```sh
+make json-server
+```
+For more information about json-server library please click [**here**](https://github.com/typicode/json-server).
 ## Environment Variables
 
 As mentioned above, there will be three envrionment variables: `.env.local` , `.env.development` and `.env.production`. \
