@@ -7,6 +7,12 @@ README, we provide useful information so that developers understand the project 
 \
 *If you have questions or need help, please ask in [GitHub Discussions](https://github.com/wish-team/wishwork-cli/discussions).*
 
+## Purpose
+As we grew as a team for development of many platforms, we struggle to define a compelling structure so that anyone could 
+easily understand the products which has been developed by Wish Work team. For instance, one may use json-server for local development
+and one may not, one may provide local environment in specific manner which is contradict with other which may cause problem for understand the project, where is redux files, where is assets, 
+to name but a few. As we believe in **Convention over Configuration** for better development, we provide our solution for establish the first architecture of the project and developers just focus on the development problems that should be solved.
+
 ## Installation
 First of all open the terminal and write below command:
 ```sh
@@ -55,7 +61,7 @@ For running `json-server` for local development, use below command:
 ```sh
 make json-server
 ```
-For more information about json-server library please click [**here**](https://github.com/typicode/json-server).
+For more information about `json-server` library please click [**here**](https://github.com/typicode/json-server).
 ## Environment Variables
 
 As mentioned above, there will be three envrionment variables: `.env.local` , `.env.development` and `.env.production`. \
