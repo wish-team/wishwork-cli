@@ -7,17 +7,19 @@ README, we provide useful information so that developers understand the project 
 \
 *If you have questions or need help, please ask in [GitHub Discussions](https://github.com/wish-team/wishwork-cli/discussions).*
 
-## Purpose
+## Motivation
 As we grew as a team for development of many platforms, we struggle to define a compelling structure so that anyone could 
 easily understand the products which has been developed by Wish Work team. For instance, one may use json-server for local development
-and one may not, one may provide local environment in specific manner which is contradict with other which may cause problem for understand the project, where is redux files, where is assets, 
-to name but a few. As we believe in **Convention over Configuration** for better development, we provide our solution for establish the first architecture of the project and developers just focus on the development problems that should be solved.
+and one may not, one may provide local environment in specific manner which contradicts with other, and it may cause overwhelming problems for understand the project, where is redux files, where is assets, 
+to name but a few. As we believe in **Convention over Configuration** for better development, we provide our solution for establishing the first architecture of the project and developers just focus on the development problems that should be solved.
 
 ## Installation
 First of all open the terminal and write below command:
+
 ```sh
 mkdir my-wish-app && cd my-wish-app
 ```
+
 and then:
 ```npm
 npx @wishwork/create-wish-work-app --install

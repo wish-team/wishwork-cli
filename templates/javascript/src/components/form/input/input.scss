@@ -1,0 +1,44 @@
+@import "../../assets/identity";
+
+.storybook-label-input {
+  font-family: 'Titillium Web', serif;
+}
+
+.storybook-input {
+  width: 100%;
+  font-family: 'Titillium Web', serif;
+  padding: 0;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #4D4D4D;
+  outline: none;
+}
+
+.storybook-input:hover {
+  background-color: #f8f8f8;
+  border: none;
+  -webkit-box-shadow: 0 2px 14px 0 rgba(227, 227, 227, 0.75);
+  -moz-box-shadow: 0 2px 14px 0 rgba(227, 227, 227, 0.75);
+  box-shadow: var(--box-shadow)
+}
+
+.storybook-input--small {
+
+}
+
+.storybook-input--medium {
+
+}
+
+.storybook-input--large {
+
+}
+
+.storybook-input-error {
+  font-family: 'Titillium Web', serif;
+  font-size: 12px;
+  color: #bc3946;
+}

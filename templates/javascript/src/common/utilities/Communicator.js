@@ -3,6 +3,25 @@ import Environment from "../../../Environment";
 
 const address = Environment.ADDRESS;
 
+/** Communicator is a function that use axios library
+ *  Example usage:
+ *
+ *  // Example.js
+ *  ...
+ *  .
+ *  import Communicator from 'Communicator'
+ *  .
+ *  ...
+ *  .
+ *  this.Communicator.postRequest('POST', '/client', successFunction, failFunction, data)
+ *
+ *  function successFunction(){
+ *      ...
+ *  }
+ *  function failFunction(){
+ *      ...
+ *  }
+ * **/
 export class Communicator {
 
     static postRequest(method, url, callBackSuccess, callBackFail, dataSet, contentType = "application/json") {
