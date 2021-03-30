@@ -1,37 +1,83 @@
-## Welcome to GitHub Pages
+# Wish Work React Application
 
-You can use the [editor on GitHub](https://github.com/wish-team/wishwork-cli/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[![npm version](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app.svg)](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app) \
+This app ships with the main React and Storybook configuration files you'll need to get up and running fast. There are standards for front-end development
+that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
+README, we provide useful information so that developers understand the project structure. \
+\
+*If you have questions or need help, please ask in [GitHub Discussions](https://github.com/wish-team/wishwork-cli/discussions).*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Installation
+First of all open the terminal and write below command:
+```sh
+mkdir my-wish-app && cd my-wish-app
+```
+and then:
+```npm
+npx @wishwork/create-wish-work-app --install
+```
+After that the project will be initialize. there will be some questions that you should answer.\
+For example which template would you prefer `Javascript` or `Typescript`.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Structure
+The project structure will be as below: 
 
-```markdown
-Syntax highlighted code block
+    .
+    ├── .storybook             # Storybook configuration
+    ├── .github                # Github workflow configuration
+    ├── src                    # Source files and folders
+    ├── test                   # Automated tests (alternatively `spec` or `tests`)
+    ├── Makefile               # Makefile for running commands (e.g. make local)
+    ├── index.js               # Main file for running the main app
+    ├── Environment.js         # Javascript environment for using from process.env and return an object for better usage. 
+    ├── .env.local             # Local env (activate by `make local`)
+    ├── .env.development       # Development env (activate by `make dev`)
+    ├── .env.production        # Production env (activation by `make production`)
+    ├── LICENSE                 
+    └── README.md   
 
-# Header 1
-## Header 2
-### Header 3
+Inside a `src` folder would be some other folders as below:
 
-- Bulleted
-- List
+    src
+    ├── App.js                 # 
+    ├── components             # Reusable components
+    ├── stories                # Stories for getting preview
+    ├── common                 
+         ├── assets            #  assets like images, fonts, icons, identity.css, etc
+         ├── mock-api          #  consists of two json file one named mock.json (json returner) one named routes.json (route handler) 
+         ├── utilities   
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Local Server
 
-[Link](url) and ![Image](src)
+For running `json-server` for local development, use below command:
+```sh
+make json-server
+```
+For more information about json-server library please click [**here**](https://github.com/typicode/json-server).
+## Environment Variables
+
+As mentioned above, there will be three envrionment variables: `.env.local` , `.env.development` and `.env.production`. \
+\
+Each of them has it's own usage. \
+\
+For local development you could use below command in the root of the project and also use `.env.local`:
+```makefile
+make local
+```
+For staging development you could use below command in the root of the project and also use `.env.development`:
+```makefile
+make dev
+```
+For production you could use below command in the root of the project and also use `.env.production`:
+```makefile
+make production
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wish-team/wishwork-cli/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Storybook Preview
+you could use below command for getting preview from the storybook.
+```
+make storybook
+``` 
+This storybook is based on [**Wish Work Design System**](https://github.com/wish-team/wish-work-dms).
