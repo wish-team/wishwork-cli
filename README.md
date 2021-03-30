@@ -1,7 +1,7 @@
 # Create Wish Work App
 
 [![npm version](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app.svg)](https://badge.fury.io/js/%40wishwork%2Fcreate-wish-work-app) \
-This app ships with the main **React** and **Storybook** configuration files you'll need to get up and running fast. There are standards for front-end development
+This CLI ships with the main **React** and **Storybook** configuration files you'll need to get up and running fast. There are standards for front-end development
 that has been initialized by [**Wish Work**](https://wishwork.org) team for products which is developed by freelancers and developers. In this
 README, we provide useful information so that developers understand the project structure. \
 \
@@ -11,7 +11,7 @@ README, we provide useful information so that developers understand the project 
 As we grew as a team for development of many platforms, we struggle to define a compelling structure so that anyone could 
 easily understand the products which has been developed by Wish Work team. For instance, one may use json-server for local development
 and one may not, one may provide local environment in specific manner which contradicts with other, and it may cause overwhelming problems for understand the project, where is redux files, where is assets, 
-to name but a few. As we believe in **Convention over Configuration** for better development, we provide our solution for establishing the first architecture of the project and developers just focus on the development problems that should be solved.
+to name but a few. As we believe in [**Convention over Configuration**](https://en.wikipedia.org/wiki/Convention_over_configuration) for better development, we provide our solution for establishing the first architecture of the project and developers just focus on the development problems that should be solved.
 
 ## Installation
 First of all open the terminal and write below command:
@@ -71,15 +71,15 @@ As mentioned above, there will be three envrionment variables: `.env.local` , `.
 Each of them has it's own usage. \
 \
 For local development you could use below command in the root of the project and also use `.env.local`:
-```makefile
+```sh
 make local
 ```
 For staging development you could use below command in the root of the project and also use `.env.development`:
-```makefile
+```sh
 make dev
 ```
 For production you could use below command in the root of the project and also use `.env.production`:
-```makefile
+```sh
 make production
 ```
 
@@ -96,6 +96,8 @@ a `main.yaml` file in `.github/workflow` folder.
 you should create two instance in your repository settings: 
 1. `ACTIONS_DEPLOY_ACCESS_TOKEN`
 2. `REACT_APP_GITHUB_URL`
+
+\
 \
 Make sure GitHub Pages option in your GitHub project settings is set to use the gh-pages branch.
 \
