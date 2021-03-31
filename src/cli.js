@@ -45,7 +45,14 @@ async function promptForMissingOptions(options) {
             default: defaultTemplate
         })
     }
-
+    if(!options.runInstall){
+        questions.push({
+            type: 'confirm',
+            name: 'install dependencies',
+            message: 'Install npm dependencies for your project',
+            default: false
+        })
+    }
     if (!options.storybook) {
         questions.push({
             type: 'confirm',
@@ -69,6 +76,7 @@ async function promptForMissingOptions(options) {
     return {
         ...options,
         template: options.template || answer.template,
+        runInstall: options.runInstall || answer.runInstall,
         git: options.git || answer.git,
         storybook: options.storybook || answer.storybook
     }
