@@ -11,10 +11,10 @@ src/stories
 # misc
 .idea
 .DS_Store
-.env.local
-.env.development
-.env.production
-
+#.env.local
+#.env.development
+#.env.production
+.eslintcache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
