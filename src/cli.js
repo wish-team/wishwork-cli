@@ -48,8 +48,8 @@ async function promptForMissingOptions(options) {
     if(!options.runInstall){
         questions.push({
             type: 'confirm',
-            name: 'install dependencies',
-            message: 'Install npm dependencies for your project',
+            name: 'runInstall',
+            message: 'Install npm dependencies for your project?',
             default: false
         })
     }
