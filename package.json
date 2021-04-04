@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/octocat/my-other-repo.git"
   },
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "CLI to Bootstrap Wish Work Products",
   "main": "src/index.js",
   "bin": {
@@ -31,8 +31,10 @@
     "execa": "^5.0.0",
     "inquirer": "^8.0.0",
     "listr": "^0.14.3",
+    "loadash": "^1.0.0",
     "ncp": "^2.0.0",
-    "pkg-install": "^1.0.0"
+    "pkg-install": "^1.0.0",
+    "touch": "^3.1.0"
   },
   "files": [
     "bin/",

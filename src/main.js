@@ -5,6 +5,7 @@ import path from 'path';
 import {promisify} from 'util';
 import execa from 'execa';
 import Listr from 'listr';
+import touch from 'touch';
 import {projectInstall} from "pkg-install";
 
 const access = promisify(fs.access);
@@ -20,6 +21,15 @@ async function initGit(options) {
     const result = await execa('git', ['init'], {
         cwd: options.targetDirectory
     });
+    touch(options.targetDirectory + '/.gitignore').then(
+        fs.copyFile('gitignorefile.txt', options.targetDirectory + '/.gitignore', (err) => {
+            if (err) {
+                //TODO it's show unnecessary error! but the file would be copied
+                //nothing
+            }
+            console.log('%s ignoring files has been copied to .gitignore', chalk.green.bold('COPIED'));
+        })
+    );
     if (result.failed) {
         return Promise.reject(new Error('Failed to initialize Git'))
     }

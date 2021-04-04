@@ -22,7 +22,7 @@ mkdir my-wish-app && cd my-wish-app
 
 and then:
 ```npm
-npx @wishwork/create-wish-work-app --install
+npx @wishwork/create-wish-work-app
 ```
 After that the project will be initialize. there will be some questions that you should answer.\
 For example which template would you prefer `Javascript` or `Typescript`.
