@@ -8,6 +8,7 @@ function parseArgumentIntoOptions(rawArgs) {
             '--git': Boolean,
             '--yes': Boolean,
             '--install': Boolean,
+            '--framework': String,
             '--sb': Boolean,
             '-g': '--git',
             '-y': '--yes',
@@ -20,6 +21,7 @@ function parseArgumentIntoOptions(rawArgs) {
     return {
         skipPrompts: args['--yes'] || false,
         git: args['--git'] || false,
+        framework: args['--framework'] || null,
         template: args._[0],
         storybook: args['--sb'] || false,
         runInstall: args['--install'] || false
@@ -27,15 +29,27 @@ function parseArgumentIntoOptions(rawArgs) {
 }
 
 async function promptForMissingOptions(options) {
+    const defaultFrameWork = "React";
     const defaultTemplate = "JavaScript";
     if (options.skipPrompts) {
         return {
             ...options,
-            template: options.template || defaultTemplate
+            template: options.template || defaultTemplate,
+            framework: options.framework || defaultFrameWork
         };
     }
 
     let questions = [];
+    if(options.framework === null ){
+        questions.push({
+            type: 'list',
+            name: 'framework',
+            message: 'Please choose your JS framework',
+            choices: ['React', 'Gatsby', 'NextJS', 'NodeJS'],
+            default: defaultFrameWork
+        })
+    }
+
     if (!options.template) {
         questions.push({
             type: 'list',
@@ -78,7 +92,8 @@ async function promptForMissingOptions(options) {
         template: options.template || answer.template,
         runInstall: options.runInstall || answer.runInstall,
         git: options.git || answer.git,
-        storybook: options.storybook || answer.storybook
+        storybook: options.storybook || answer.storybook,
+        framework: options.framework || answer.framework
     }
 }
 

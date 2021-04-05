@@ -49,6 +49,7 @@ async function initDesignManagementSystem(options) {
 }
 
 export async function createProject(options) {
+    const framework = options.framework.toLowerCase();
     options = {
         ...options,
         targetDirectory: options.targetDirectory || process.cwd()
@@ -56,7 +57,7 @@ export async function createProject(options) {
     const currentFileUrl = import.meta.url;
     const templateDir = path.resolve(
         new URL(currentFileUrl).pathname,
-        '../../templates',
+        `../../templates/${framework}/`,
         options.template.toLowerCase()
     );
     options.templateDirectory = templateDir;

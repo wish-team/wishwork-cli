@@ -1,6 +1,6 @@
 .storybook
 src/stories
-
+dist
 
 
 /node_modules
